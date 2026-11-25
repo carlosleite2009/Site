@@ -1,0 +1,23 @@
+# Configuração para publicar o Sistema de Solicitações direto do GitHub no Render.
+# Coloque este arquivo na RAIZ do repositório (ao lado da pasta "sistema").
+#
+# Se no seu repositório o app.py estiver na raiz (sem a pasta "sistema"),
+# apague a linha "rootDir: sistema".
+
+services:
+  - type: web
+    name: sistema-solicitacoes
+    runtime: python
+    plan: free
+    rootDir: sistema
+    buildCommand: pip install -r requirements.txt gunicorn
+    # 1 processo + várias threads: o banco é SQLite (um arquivo só)
+    startCommand: gunicorn app:app --workers 1 --threads 4 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: SECRET_KEY
+        generateValue: true
+      # MODO_DEMO=1 libera a "validação simulada" de contas. Troque para 0 quando for usar de verdade.
+      - key: MODO_DEMO
+        value: "1"
