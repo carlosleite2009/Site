@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Gestão</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Área da gestão</h1><p class="sub">Receba, analise e atualize as ocorrências encaminhadas pela secretaria.</p>
+<div class="notice">As alterações de prioridade, situação, providências e justificativas ficam registradas no histórico e no registro de atividades.</div>
+<div class="card"><div class="filters"><div><label>Buscar protocolo/local</label><input id="manageSearch" placeholder="Buscar..."></div><div><label>Prioridade</label><select id="priorityFilter"><option value="">Todas</option><option>Urgente</option><option>Alta</option><option>Média</option><option>Baixa</option></select></div><div><label>Situação</label><select id="statusFilter"><option value="">Todas</option><option>Recebida</option><option>Em análise</option><option>Em andamento</option><option>Resolvida</option><option>Não resolvida</option></select></div><div><label>Categoria</label><select id="categoryFilter"><option value="">Todas</option><option>Infraestrutura</option><option>Limpeza</option><option>Equipamentos</option><option>Segurança</option><option>Elétrica</option><option>Hidráulica</option><option>Mobiliário</option><option>Outros</option></select></div></div></div>
+<div id="manageCards" style="display:grid;gap:14px;margin-top:16px"></div></main><script src="/static/app.js"></script></body></html>

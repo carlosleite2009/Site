@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Acesso institucional</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<header><a class="brand" href="index2.html">Sistema de Registro de Solicitações</a></header>
+<main class="auth"><section class="card">
+<h1>Bem-vindo!</h1><p class="sub">Sistema institucional para registrar, acompanhar e gerenciar problemas nos ambientes da escola.</p>
+<div class="notice">O sistema utiliza uma única conta institucional compartilhada entre secretaria e gestão. Não são criadas contas individuais para alunos, professores ou funcionários.</div>
+<div id="loginArea"><h2>Já tenho uma conta</h2><form id="loginForm">
+<label for="email">E-mail institucional</label><input id="email" type="email" required placeholder="escola@instituicao.edu.pi.gov.br">
+<label for="senha">Senha</label><input id="senha" type="password" required placeholder="Sua senha">
+<div class="actions"><button type="submit">Entrar no sistema</button><a class="btn secondary" href="recuperar.html">Esqueci minha senha</a></div>
+</form><p id="loginMsg" class="muted"></p>
+<div class="notice" style="margin-top:16px">
+<strong>Acesso de demonstração</strong><br>
+E-mail: <b>teste.escola@gmail.com</b><br>
+Senha: <b>Escola12345</b><br>
+<button type="button" class="secondary" id="fillDemo" style="margin-top:10px">Preencher acesso de teste</button>
+<small style="display:block;margin-top:8px">Conta fictícia criada automaticamente no primeiro acesso, apenas neste navegador.</small>
+</div></div>
+<hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+<h2>Primeiro acesso?</h2><p class="sub">Faça a configuração inicial da instituição. O cadastro ficará pendente até a validação institucional.</p><a class="btn" href="registro.html">Criar conta institucional</a>
+</section></main><footer>Conta institucional única</footer><script src="/static/app.js"></script></body></html>

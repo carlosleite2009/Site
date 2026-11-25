@@ -1,0 +1,24 @@
+SISTEMA DE REGISTRO DE SOLICITAÇÕES (versão funcionando)
+
+Como rodar:
+1. Instale o Python 3.9+ (python.org)
+2. No terminal, dentro desta pasta:
+     pip install -r requirements.txt
+     python app.py
+3. Abra http://localhost:5000 no navegador
+
+Acesso de teste (criado automaticamente):
+  E-mail: teste.escola@gmail.com
+  Senha:  Escola12345
+
+O que é real agora:
+- Banco SQLite (arquivo dados.db, criado sozinho) — dados compartilhados por todos os computadores que acessam o servidor
+- Login com sessão e senha criptografada; as páginas internas exigem login
+- Upload de anexos (pasta uploads/)
+- Prioridade, situação, providências, justificativa e histórico salvos no servidor
+- Comunicados: publicar, editar e arquivar
+- Relatórios com filtros, CSV e impressão/PDF
+- Recuperação de senha: gera o link no terminal (não há servidor de e-mail configurado)
+
+Variáveis opcionais: SECRET_KEY (chave da sessão), PORT, MODO_DEMO=0 (desliga a "validação simulada").
+Limite de 3 contas, como no protótipo original.

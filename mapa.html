@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Mapa da escola</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Mapa da escola</h1><p class="sub">Selecione um ambiente para consultar ocorrências relacionadas ou utilizá-lo no registro de um problema.</p>
+<div class="card"><div class="legend"><span><i class="dot"></i>Sem ocorrência aberta</span><span><i class="dot red"></i>Possui ocorrência não resolvida</span></div>
+<div class="map-grid" id="schoolMap" style="margin-top:18px">
+<button class="room" data-room="Sala de aula">Sala de aula</button><button class="room" data-room="Banheiros">Banheiros</button><button class="room" data-room="Biblioteca">Biblioteca</button><button class="room" data-room="Laboratório">Laboratório</button><button class="room" data-room="Pátio">Pátio</button><button class="room" data-room="Quadra">Quadra</button><button class="room" data-room="Secretaria">Secretaria</button><button class="room" data-room="Refeitório">Refeitório</button><button class="room" data-room="Corredores">Corredores</button><button class="room" data-room="Área externa">Área externa</button><button class="room" data-room="Outro ambiente">Outro ambiente</button></div></div>
+<div class="card" style="margin-top:16px"><h2 id="roomTitle">Selecione um ambiente</h2><div id="roomDetails" class="muted">Os detalhes das ocorrências do local aparecerão aqui.</div><div class="actions" style="margin-top:14px"><a class="btn" href="ocorrencias.html">Registrar problema</a></div></div>
+</main><script src="/static/app.js"></script></body></html>

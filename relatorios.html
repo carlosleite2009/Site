@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Relatórios</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Relatórios e histórico</h1><p class="sub">Consulte os registros por período e exporte os resultados para planilha ou PDF.</p>
+<div class="card"><div class="filters"><div><label>Período</label><select id="period"><option value="all">Todo o período</option><option value="day">Hoje</option><option value="week">Últimos 7 dias</option><option value="month">Últimos 30 dias</option></select></div><div><label>Local</label><select id="reportLocation"><option value="">Todos</option><option>Sala de aula</option><option>Banheiros</option><option>Biblioteca</option><option>Laboratório</option><option>Pátio</option><option>Quadra</option><option>Secretaria</option><option>Refeitório</option><option>Corredores</option><option>Área externa</option><option>Outro ambiente</option></select></div><div><label>Categoria</label><select id="reportCategory"><option value="">Todas</option><option>Infraestrutura</option><option>Limpeza</option><option>Equipamentos</option><option>Segurança</option><option>Elétrica</option><option>Hidráulica</option><option>Mobiliário</option><option>Outros</option></select></div><div><label>Situação</label><select id="reportStatus"><option value="">Todas</option><option>Recebida</option><option>Em análise</option><option>Em andamento</option><option>Resolvida</option><option>Não resolvida</option></select></div></div><div class="actions"><button id="applyReport">Aplicar filtros</button><button id="exportCsv" class="secondary">Exportar planilha CSV</button><button id="printReport" class="secondary">Salvar / imprimir PDF</button></div></div>
+<div class="grid" style="margin-top:16px"><div class="card span-4"><div class="muted">Registros no filtro</div><div class="stat" id="reportTotal">0</div></div><div class="card span-4"><div class="muted">Em aberto</div><div class="stat" id="reportOpen">0</div></div><div class="card span-4"><div class="muted">Resolvidas</div><div class="stat" id="reportDone">0</div></div>
+<div class="card span-12"><h2>Relatório de ocorrências</h2><div class="table-wrap"><table id="reportTable"><thead><tr><th>Protocolo</th><th>Local</th><th>Categoria</th><th>Prioridade</th><th>Situação</th><th>Data</th></tr></thead><tbody id="reportRows"></tbody></table></div></div>
+<div class="card span-12"><h2>Histórico de atividades</h2><div class="table-wrap"><table><thead><tr><th>Data e hora</th><th>Setor</th><th>Operação</th></tr></thead><tbody id="historyRows"></tbody></table></div></div></div></main><script src="/static/app.js"></script></body></html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cadastro institucional</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<header><a class="brand" href="index2.html">Sistema de Registro de Solicitações</a></header><main class="auth"><section class="card">
+<h1>Criar conta institucional</h1><p class="sub">Preencha os dados para a configuração inicial da escola.</p>
+<div class="notice warn">A criação deve ocorrer uma única vez e passar por validação institucional antes da liberação do acesso.</div>
+<form id="registerForm"><label>Nome da escola</label><input id="school" required placeholder="Nome completo da instituição">
+<label>E-mail institucional</label><input id="regEmail" type="email" required placeholder="E-mail institucional">
+<label>Nome do responsável pela criação</label><input id="owner" required placeholder="Nome do responsável">
+<label>Senha</label><input id="regPass" type="password" minlength="8" required placeholder="Mínimo de 8 caracteres">
+<label>Confirmação da senha</label><input id="regConfirm" type="password" minlength="8" required placeholder="Repita a senha">
+<button type="submit">Enviar cadastro para validação</button><p id="registerMsg" class="muted"></p></form>
+<a class="btn secondary" href="index2.html">Voltar para a página inicial</a>
+</section></main><script src="/static/app.js"></script></body></html>

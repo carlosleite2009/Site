@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Painel</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Painel principal</h1><p class="sub" id="schoolTitle">Visão geral da instituição e das atividades da secretaria e da gestão.</p>
+<div class="notice">A mesma conta institucional atende à secretaria e à gestão. Selecione a área de trabalho conforme sua responsabilidade. As ações ficam registradas com setor, data e horário.</div>
+<div class="grid">
+<div class="card span-3"><div class="muted">Total de ocorrências</div><div class="stat" id="total">0</div></div>
+<div class="card span-3"><div class="muted">Aguardando análise</div><div class="stat" id="pending">0</div></div>
+<div class="card span-3"><div class="muted">Em andamento</div><div class="stat" id="progress">0</div></div>
+<div class="card span-3"><div class="muted">Resolvidas</div><div class="stat" id="done">0</div></div>
+<div class="card span-6"><h2>Área da secretaria</h2><p class="sub">Registrar problemas, selecionar o ambiente no mapa e encaminhar ocorrências para a gestão.</p><a class="btn" href="ocorrencias.html">Registrar ocorrência</a></div>
+<div class="card span-6"><h2>Área da gestão</h2><p class="sub">Receber e analisar ocorrências, definir prioridade, atualizar o andamento e registrar providências.</p><a class="btn" href="gestao.html">Acessar gestão</a></div>
+<div class="card span-6"><h2>Mapa da escola</h2><p class="sub">Visualize os ambientes e identifique locais com problemas ainda não resolvidos.</p><a class="btn secondary" href="mapa.html">Abrir mapa</a></div>
+<div class="card span-6"><h2>Relatórios e comunicados</h2><p class="sub">Consulte indicadores, exporte os dados e acompanhe avisos oficiais.</p><div class="actions"><a class="btn secondary" href="relatorios.html">Relatórios</a><a class="btn secondary" href="comunicados.html">Comunicados</a></div></div>
+<div class="card span-12"><h2>Atividades recentes</h2><div class="table-wrap"><table><thead><tr><th>Data e hora</th><th>Setor</th><th>Atividade</th></tr></thead><tbody id="activityRows"></tbody></table></div></div>
+<div class="card span-12"><h2>Validação institucional (modo de demonstração)</h2><p class="sub">A validação real deve ser feita por uma autoridade institucional fora deste protótipo. Este botão existe apenas para testar o fluxo acadêmico.</p><p id="validationStatus" class="muted"></p><button id="approveDemo" class="warning">Simular validação institucional</button></div>
+</div></main><footer>Dados salvos no servidor</footer><script src="/static/app.js"></script></body></html>

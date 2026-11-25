@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Comunicados</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Comunicados oficiais</h1><p class="sub">Espaço destinado a mensagens e avisos oficiais da escola. Publicar, editar e arquivar comunicados é uma função da gestão.</p>
+<div class="grid"><section class="card span-6" id="publishBox"><h2>Publicar comunicado</h2><form id="noticeForm"><label>Título</label><input id="noticeTitle" required placeholder="Título do aviso"><label>Mensagem</label><textarea id="noticeBody" required placeholder="Escreva o comunicado oficial"></textarea><button type="submit">Publicar comunicado</button></form><p class="muted">Todas as ações ficam registradas no histórico de atividades.</p></section>
+<section class="card span-6"><h2>Orientação</h2><div class="notice">Somente a gestão deve publicar, editar ou arquivar comunicados oficiais. Os avisos arquivados permanecem disponíveis no histórico.</div></section>
+<section class="card span-12"><h2>Comunicados publicados</h2><div id="noticeList"></div></section>
+<section class="card span-12"><h2>Comunicados arquivados</h2><div id="archivedList"></div></section></div></main><script src="/static/app.js"></script></body></html>

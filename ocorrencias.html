@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Ocorrências</title><link rel='stylesheet' href="/static/style.css"></head><body>
+<header>
+<a class="brand" href="painel.html">Sistema de Registro de Solicitações</a>
+<nav>
+<a href="painel.html">Painel</a><a href="mapa.html">Mapa da escola</a>
+<a href="ocorrencias.html">Ocorrências</a><a href="gestao.html">Gestão</a>
+<a href="relatorios.html">Relatórios</a><a href="comunicados.html">Comunicados</a>
+<a href="#" onclick="logout();return false">Sair</a>
+</nav>
+</header>
+
+<main><h1>Registro de ocorrências</h1><p class="sub">A secretaria pode registrar problemas comunicados à instituição, anexar arquivos e encaminhar para a gestão.</p>
+<div class="grid"><section class="card span-8"><h2>Nova ocorrência</h2><form id="occurrenceForm">
+<div class="form-grid"><div><label>Ambiente / local</label><select id="location" required><option value="">Selecione</option><option>Sala de aula</option><option>Banheiros</option><option>Biblioteca</option><option>Laboratório</option><option>Pátio</option><option>Quadra</option><option>Secretaria</option><option>Refeitório</option><option>Corredores</option><option>Área externa</option><option>Outro ambiente</option></select></div>
+<div><label>Categoria</label><select id="category" required><option value="">Selecione</option><option>Infraestrutura</option><option>Limpeza</option><option>Equipamentos</option><option>Segurança</option><option>Elétrica</option><option>Hidráulica</option><option>Mobiliário</option><option>Outros</option></select></div>
+<div class="full"><label>Título do problema</label><input id="title" required placeholder="Resuma o problema"></div>
+<div class="full"><label>Descrição detalhada</label><textarea id="description" required placeholder="Explique o que foi encontrado, quando e outras informações importantes"></textarea></div>
+<div class="full"><label>Anexos (fotografias ou documentos)</label><input id="attachments" type="file" multiple accept="image/*,.pdf,.doc,.docx"><span class="muted">Os arquivos são enviados e guardados no servidor (até 25 MB no total).</span></div></div>
+<button type="submit">Registrar e encaminhar para gestão</button><p id="occurrenceMsg" class="muted"></p></form></section>
+<section class="card span-4"><h2>Orientações</h2><p class="sub">Ao registrar, o sistema gera um protocolo único e grava automaticamente a data e o horário.</p><div class="notice">Após o registro, a ocorrência ficará disponível para análise da gestão. A prioridade e as providências serão definidas na área de gestão.</div></section>
+<section class="card span-12"><h2>Ocorrências registradas</h2><div class="table-wrap"><table><thead><tr><th>Protocolo</th><th>Local</th><th>Categoria</th><th>Data</th><th>Situação</th></tr></thead><tbody id="occurrenceRows"></tbody></table></div></section></div></main><script src="/static/app.js"></script></body></html>
